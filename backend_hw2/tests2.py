@@ -1,19 +1,19 @@
-from backend_hw2_2 import CustomMeta, CustomClass
+from backend_hw2_2 import CustomClass
 import unittest
 
-class MetaClassTest(unittest.TestCase):
-    def setUp(self):
-        self.inst = CustomClass()
+class MetaClassTest(unittest.TestCase):      
 
     def testMetaClass(self):
-        self.assertEqual(self.inst.custom_x,50)
-        self.assertEqual(self.inst.custom_line(),100)
-        
+        inst = CustomClass()
+        print(inst)
+        self.assertEqual(inst.custom_val, 99)
+        self.assertEqual(inst.custom_x, 50)
+        self.assertEqual(inst.custom_line(), 100)
         with self.assertRaises(AttributeError):
-            x = self.inst.x
+            x = inst.x
 
         with self.assertRaises(AttributeError):
-            self.inst.line()
+            inst.line()
     
 if __name__ == '__main__':
     unittest.main()
