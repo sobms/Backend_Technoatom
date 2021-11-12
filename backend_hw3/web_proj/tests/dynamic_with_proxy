@@ -1,0 +1,51 @@
+ab -c 600 -n 10000 http://site01/api/get/dynamic/documents/with/proxy
+
+Benchmarking site01 (be patient)
+Completed 1000 requests
+Completed 2000 requests
+Completed 3000 requests
+Completed 4000 requests
+Completed 5000 requests
+Completed 6000 requests
+Completed 7000 requests
+Completed 8000 requests
+Completed 9000 requests
+Completed 10000 requests
+Finished 10000 requests
+
+
+Server Software:        nginx/1.18.0
+Server Hostname:        site01
+Server Port:            80
+
+Document Path:          /api/get/dynamic/documents/with/proxy
+Document Length:        68 bytes
+
+Concurrency Level:      600
+Time taken for tests:   5.080 seconds
+Complete requests:      10000
+Failed requests:        0
+Total transferred:      2260000 bytes
+HTML transferred:       680000 bytes
+Requests per second:    1968.36 [#/sec] (mean)
+Time per request:       304.823 [ms] (mean)
+Time per request:       0.508 [ms] (mean, across all concurrent requests)
+Transfer rate:          434.42 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    3   9.8      0      46
+Processing:    35  293  38.2    298     329
+Waiting:        1  292  38.3    298     329
+Total:         44  295  30.7    299     364
+
+Percentage of the requests served within a certain time (ms)
+  50%    299
+  66%    304
+  75%    310
+  80%    312
+  90%    317
+  95%    321
+  98%    325
+  99%    327
+ 100%    364 (longest request)

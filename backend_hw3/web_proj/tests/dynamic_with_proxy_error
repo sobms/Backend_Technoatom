@@ -1,0 +1,6 @@
+ab -c 600 -n 10000 http://site01/api/get/dynamic/documents/with/proxy
+
+Benchmarking site01 (be patient)
+apr_socket_recv: Connection reset by peer (104)
+Total of 38 requests completed
+

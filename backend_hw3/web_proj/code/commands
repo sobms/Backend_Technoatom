@@ -1,0 +1,3 @@
+gunicorn wsgi_app:app
+
+sudo service nginx start

@@ -1,0 +1,6 @@
+b -c 1025 -n 10000 http://site01/img2.jpg
+
+
+Benchmarking site01 (be patient)
+socket: Too many open files (24)
+

@@ -1,0 +1,53 @@
+ab -c 1000 -n 10000 http://site01/img2.jpg
+
+Benchmarking site01 (be patient)
+Completed 1000 requests
+Completed 2000 requests
+Completed 3000 requests
+Completed 4000 requests
+Completed 5000 requests
+Completed 6000 requests
+Completed 7000 requests
+Completed 8000 requests
+Completed 9000 requests
+Completed 10000 requests
+Finished 10000 requests
+
+
+Server Software:        nginx/1.18.0
+Server Hostname:        site01
+Server Port:            80
+
+Document Path:          /img2.jpg
+Document Length:        0 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   11.138 seconds
+Complete requests:      10000
+Failed requests:        10000
+   (Connect: 0, Receive: 0, Length: 9936, Exceptions: 64)
+Non-2xx responses:      24
+Total transferred:      7615299048 bytes
+HTML transferred:       7612836768 bytes
+Requests per second:    897.86 [#/sec] (mean)
+Time per request:       1113.759 [ms] (mean)
+Time per request:       1.114 [ms] (mean, across all concurrent requests)
+Transfer rate:          667721.84 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   25  10.3     22      74
+Processing:    22 1070 148.4   1099    1326
+Waiting:        0   32  37.9     24     225
+Total:         54 1095 144.4   1121    1357
+
+Percentage of the requests served within a certain time (ms)
+  50%   1121
+  66%   1132
+  75%   1138
+  80%   1146
+  90%   1188
+  95%   1211
+  98%   1312
+  99%   1346
+ 100%   1357 (longest request)

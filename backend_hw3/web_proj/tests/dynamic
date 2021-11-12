@@ -1,0 +1,51 @@
+ab -c 1000 -n 10000 http://127.0.0.1:8000/
+
+Benchmarking 127.0.0.1 (be patient)
+Completed 1000 requests
+Completed 2000 requests
+Completed 3000 requests
+Completed 4000 requests
+Completed 5000 requests
+Completed 6000 requests
+Completed 7000 requests
+Completed 8000 requests
+Completed 9000 requests
+Completed 10000 requests
+Finished 10000 requests
+
+
+Server Software:        gunicorn
+Server Hostname:        127.0.0.1
+Server Port:            8000
+
+Document Path:          /
+Document Length:        32 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   4.508 seconds
+Complete requests:      10000
+Failed requests:        0
+Total transferred:      1770000 bytes
+HTML transferred:       320000 bytes
+Requests per second:    2218.15 [#/sec] (mean)
+Time per request:       450.826 [ms] (mean)
+Time per request:       0.451 [ms] (mean, across all concurrent requests)
+Transfer rate:          383.41 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    5  14.4      0      69
+Processing:    29  421  76.9    442     456
+Waiting:        1  421  77.0    442     456
+Total:         99  426  63.2    442     456
+
+Percentage of the requests served within a certain time (ms)
+  50%    442
+  66%    443
+  75%    444
+  80%    447
+  90%    452
+  95%    453
+  98%    454
+  99%    454
+ 100%    456 (longest request)
